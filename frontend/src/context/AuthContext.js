@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
     const token = localStorage.getItem('ss_token');
     if (!token) { setLoading(false); return; }
     try {
-      const { data } = await api.get('/auth/verify');
+      const { data } = await api.get('api/auth/verify');
       setAdmin(data.admin);
     } catch {
       localStorage.removeItem('ss_token');
@@ -21,7 +21,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => { verify(); }, [verify]);
 
   const login = async (username, password) => {
-    const { data } = await api.post('/auth/login', { username, password });
+    const { data } = await api.post('/api/auth/login', { username, password });
     localStorage.setItem('ss_token', data.token);
     setAdmin(data.admin);
     return data;
