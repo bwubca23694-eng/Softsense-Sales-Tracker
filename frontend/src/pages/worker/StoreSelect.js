@@ -18,7 +18,7 @@ const StoreSelect = () => {
 
   useEffect(() => {
     if (!worker) { navigate('/'); return; }
-    api.get('/api/stores').then(r => setStores(r.data)).catch(() => toast.error('Failed to load stores')).finally(() => setLoading(false));
+    api.get('/stores').then(r => setStores(r.data)).catch(() => toast.error('Failed to load stores')).finally(() => setLoading(false));
   }, [worker, navigate]);
 
   const filtered = stores.filter(s => s.name.toLowerCase().includes(search.toLowerCase()));
