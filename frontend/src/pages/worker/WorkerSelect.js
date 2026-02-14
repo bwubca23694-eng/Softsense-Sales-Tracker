@@ -19,7 +19,7 @@ const WorkerSelect = () => {
   }, []);
 
   useEffect(() => {
-    api.get('/api/workers').then(r => setWorkers(r.data)).catch(() => toast.error('Failed to load workers')).finally(() => setLoading(false));
+    api.get('/workers').then(r => setWorkers(r.data)).catch(() => toast.error('Failed to load workers')).finally(() => setLoading(false));
   }, []);
 
   const handleTitleTap = () => {
@@ -43,7 +43,7 @@ const WorkerSelect = () => {
           onClick={handleTitleTap}
           style={{ fontFamily: 'var(--font-display)', fontSize: '2.2rem', fontWeight: 800, color: 'white', letterSpacing: '-0.04em', cursor: 'default', userSelect: 'none', position: 'relative' }}
         >SoftSense</h1>
-        <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.875rem', marginTop: '0.25rem' }}>Daily Sales Tracker</p>
+        <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.875rem', marginTop: '0.25rem' }}>Daily Sell Tracker</p>
         <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', background: 'rgba(255,255,255,0.15)', borderRadius: 100, padding: '0.3rem 0.9rem', marginTop: '0.875rem' }}>
           <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#4ade80', display: 'inline-block' }} />
           <span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.9)', fontWeight: 500 }}>Pallab Arong</span>
