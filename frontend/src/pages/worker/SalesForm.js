@@ -28,9 +28,9 @@ const SalesForm = () => {
     if (!worker || !store) { navigate('/'); return; }
     try {
       const [prodRes, qRes, checkRes] = await Promise.all([
-        api.get('/api/products'),
-        api.get('/api/questions'),
-        api.get(`/api/submissions/check?workerId=${worker._id}&storeId=${store._id}&date=${date}`)
+        api.get('/products'),
+        api.get('/questions'),
+        api.get(`/submissions/check?workerId=${worker._id}&storeId=${store._id}&date=${date}`)
       ]);
       setProducts(prodRes.data);
       setQuestions(qRes.data);
@@ -72,7 +72,7 @@ const SalesForm = () => {
 
     setSubmitting(true);
     try {
-      await api.post('/api/submissions', {
+      await api.post('/submissions', {
         workerId: worker._id, workerName: worker.name,
         storeId: store._id, storeName: store.name,
         date, items, answers: answerArr, notes
