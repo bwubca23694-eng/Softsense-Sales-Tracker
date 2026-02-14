@@ -19,7 +19,7 @@ const WorkerSelect = () => {
   }, []);
 
   useEffect(() => {
-    api.get('/workers').then(r => setWorkers(r.data)).catch(() => toast.error('Failed to load workers')).finally(() => setLoading(false));
+    api.get('/api/workers').then(r => setWorkers(r.data)).catch(() => toast.error('Failed to load workers')).finally(() => setLoading(false));
   }, []);
 
   const handleTitleTap = () => {
