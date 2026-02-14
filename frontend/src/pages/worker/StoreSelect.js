@@ -72,7 +72,7 @@ const StoreSelect = () => {
                     <div style={{ fontWeight: 600, fontSize: '0.925rem', color: '#1e293b' }}>{s.name}</div>
                     {s.location && <div style={{ fontSize: '0.75rem', color: '#64748b', marginTop: '0.1rem' }}>📍 {s.location}</div>}
                   </div>
-                  {isLast && <span className="badge badge-blue" style={{ fontSize: '0.65rem' }}>Last</span>}
+                  
                   <span style={{ color: '#94a3b8', fontSize: '1.1rem' }}>›</span>
                 </button>
               );

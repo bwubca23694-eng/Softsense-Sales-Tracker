@@ -46,7 +46,7 @@ const WorkerSelect = () => {
         <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.875rem', marginTop: '0.25rem' }}>Daily Sales Tracker</p>
         <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', background: 'rgba(255,255,255,0.15)', borderRadius: 100, padding: '0.3rem 0.9rem', marginTop: '0.875rem' }}>
           <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#4ade80', display: 'inline-block' }} />
-          <span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.9)', fontWeight: 500 }}>Who are you?</span>
+          <span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.9)', fontWeight: 500 }}>Pallab Arong</span>
         </div>
       </div>
 
